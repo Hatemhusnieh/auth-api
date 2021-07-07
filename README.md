@@ -13,7 +13,7 @@
 ## Deploy, Run and Test
 - [test report](https://github.com/Hatemhusnieh/auth-api/actions)
 - [deployed link](https://hatem-auth-api.herokuapp.com/)
-- [Pull Request](https://github.com/Hatemhusnieh/auth-api/pull/2)
+- [Pull Request](https://github.com/Hatemhusnieh/auth-api/pull/4)
 
 ### Setup  
 #### `.env` requirement

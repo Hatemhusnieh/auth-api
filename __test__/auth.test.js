@@ -2,10 +2,10 @@
 const supergoose = require('@code-fellows/supergoose');
 const server = require('../src/server');
 const mockReq = supergoose(server.server);
+// require('dotenv').config();
 
-process.env.SECRET = 'yariyariyari';
+// process.env.SECRET = 'yariyariyari';
 
-require('dotenv').config();
 
 let users = {
   admin: { username: 'test1', password: 'test', role: 'admin' },

@@ -2,7 +2,8 @@
 const supergoose = require('@code-fellows/supergoose');
 const server = require('../src/server');
 const mockReq = supergoose(server.server);
-// require('dotenv').config();
+require('dotenv').config();
+process.env.SECRET = 'yariyariyari';
 
 
 describe('admin', () => {

@@ -8,6 +8,7 @@ const errorHandler = require('./error-handlers/500');
 const v1Routes = require('./routes/v1');
 const v2Routes = require('./routes/v2');
 const authRoutes = require('./routes/routes.js');
+const toDoRote = require('./routes/todos');
 const app = express();
 
 app.use(cors());
@@ -18,9 +19,10 @@ app.use(logger);
 app.use('/api/v1', v1Routes);
 // with auth
 app.use('/api/v2', v2Routes);
+app.use('/todo', toDoRote);
 app.use(authRoutes);
 
-app.get('/', (req, res)=>{
+app.get('/', (req, res) => {
   res.status(200).send('Sie sing das Essen, und wir sind die Jäger - "Shingeki no Kyojin"');
 });
 
@@ -29,8 +31,10 @@ app.use(notFoundHandler);
 
 module.exports = {
   server: app,
-  start: port => {
-    if (!port) { throw new Error('Missing Port'); }
+  start: (port) => {
+    if (!port) {
+      throw new Error('Missing Port');
+    }
     app.listen(port, () => console.log(`Listening on ${port}`));
   },
 };

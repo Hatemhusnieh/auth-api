@@ -8,10 +8,10 @@ const Collection = require('../models/data-collection.js');
 const model = new Collection(toDoSchema);
 const router = express.Router();
 
-router.get('/:model', handleGetAll);
-router.post('/:model', bearerAuth, permissions('create'), handleCreate);
-router.put('/:model/:id', bearerAuth, permissions('update'), handleUpdate);
-router.delete('/:model/:id', bearerAuth, permissions('delete'), handleDelete);
+router.get('/', handleGetAll);
+router.post('/', bearerAuth, permissions('create'), handleCreate);
+router.put('/:id', bearerAuth, permissions('update'), handleUpdate);
+router.delete('/:id', bearerAuth, permissions('delete'), handleDelete);
 
 async function handleGetAll(req, res) {
   let allRecords = await model.get();

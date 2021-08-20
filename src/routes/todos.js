@@ -3,7 +3,7 @@
 const express = require('express');
 const bearerAuth = require('../middleware/bearer');
 const permissions = require('../middleware/acl');
-const toDoSchema = require('../models/food/model');
+const toDoSchema = require('../models/to-do/toDo');
 const Collection = require('../models/data-collection.js');
 const model = new Collection(toDoSchema);
 const router = express.Router();

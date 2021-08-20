@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 const tpDoSchema = mongoose.Schema({
   assignee: { type: String, required: true },
-  text: { type: Number, required: true },
+  text: { type: String, required: true },
   complete: { type: Boolean },
 });
 
